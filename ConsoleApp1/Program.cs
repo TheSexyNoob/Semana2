@@ -12,22 +12,13 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Console.WriteLine("Person");
-
               //ILogger logger = new Persona();
-
-              //LAB v1
-              Persona p = new Persona();
-              p.Id = 1;
-              p.Name = "Luis";
-              p.LastName = "Nunez";
-
-
-            /* //LAB v2
-             * Persona p = new Persona(1, "Luis", "Nunez   ");
-             */
-
-            /* //LAB v3
-             * Persona p = new Persona
+    
+              Persona persona = new Persona();
+              persona.Id = 1;
+              persona.Name = "Luis";
+              persona.LastName = "Nunez";
+            /*  
              * {
              * Id = 1,
              * Name = "Luis",
@@ -35,16 +26,13 @@ namespace ConsoleApp1
              * };
              */
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine(i);
-            }
+           }
 
             ILogger logger = p;
-
             String personString = string.Format("ID: {0}, Name: {1} and Last Name: {2}.", p.Id, p.Name, p.LastName);
-
-            //Console.WriteLine(personString);
             logger.Log(personString);
             
             Console.ReadKey();
